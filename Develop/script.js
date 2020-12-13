@@ -35,5 +35,21 @@ $(".saveBtn").on("click", function(event){
 //pulling local storage values and adding it to the text area of the html
 for (var i = 0; i < allTextRows.length; i++){
     allTextRows[i].val(localStorage.getItem(allTextRows[i].attr("id")))
-    //going to need some explaining here
 }
+//set the color of the text area for each hour on the schedule
+function colors (){
+    var presentHourRendered = false;
+    for (var i = 0; i < allHours.length; i++){
+        if (currentHour !== allHours[i] && presentHourRendered === true){
+            document.getElementById(allHours[i]).firstElementChild.nextElementSibling.className += " future"
+        }
+        else if (currentHour === allHours[i]){
+            presentHourRendered = true;
+            document.getElementById(allHours[i]).firstElementChild.nextElementSibling.className += " present"
+        }
+        else {
+            document.getElementById(allHours[i]).firstElementChild.nextElementSibling.className += " past"
+        }
+    }
+}
+colors ()

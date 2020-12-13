@@ -32,3 +32,8 @@ $(".saveBtn").on("click", function(event){
         localStorage.setItem(allTextRows[i].attr("id"),allTextRows[i].val())
     }
 })
+//pulling local storage values and adding it to the text area of the html
+for (var i = 0; i < allTextRows.length; i++){
+    allTextRows[i].val(localStorage.getItem(allTextRows[i].attr("id")))
+    //going to need some explaining here
+}

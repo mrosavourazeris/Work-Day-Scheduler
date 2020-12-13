@@ -11,3 +11,13 @@ var allHours = ["9","10","11","12","1","2","3","4","5"]
 //Added the current date and time to Work Day Scheduler header 
 currentDay.textContent = rightNow
 currentTime.textContent = theTime
+//selecting each time table and saving them into variables
+var nine = $("#9AM")
+var ten = $("#10AM")
+var eleven = $("#11AM")
+var twelve = $("#12PM")
+var one = $("#1PM")
+var two = $("#2PM")
+var three = $("#3PM")
+var four = $("#4PM")
+var five = $("#5PM")

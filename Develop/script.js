@@ -21,3 +21,5 @@ var two = $("#2PM")
 var three = $("#3PM")
 var four = $("#4PM")
 var five = $("#5PM")
+//saving all the time tables into an array
+var allTextRows = [nine, ten, eleven, twelve, one, two, three, four, five]

@@ -23,3 +23,12 @@ var four = $("#4PM")
 var five = $("#5PM")
 //saving all the time tables into an array
 var allTextRows = [nine, ten, eleven, twelve, one, two, three, four, five]
+//when i click save button, the text the user puts into the text box is saved into local storage
+$(".saveBtn").on("click", function(event){
+    //prevents the page from reloading when the save button is clicked
+    event.preventDefault()
+    //saving the variable from user inputs into local storage
+    for (var i = 0; i < allTextRows.length; i++){
+        localStorage.setItem(allTextRows[i].attr("id"),allTextRows[i].val())
+    }
+})
